@@ -10,13 +10,9 @@ def name_formatter(champ_name):
     champ_name = champ_name.replace("'", "")
     return champ_name
 
-#fixed url finder
 def find_lola_url(champ_name, role):
     champ_web = name_formatter(champ_name)
-    if role == "support":
-        url = f"https://lolalytics.com/lol/{champ_web}/counters/?patch=30"
-    else:
-        url = f"https://lolalytics.com/lol/{champ_web}/counters/?lane={role}&patch=30"
+    url = f"https://lolalytics.com/lol/{champ_web}/counters/?lane={role}&patch=30"
     return url
 
 #extracting html from champ's lolalytics page
@@ -44,7 +40,8 @@ def get_matchwr(player_champ, enemy_champ, role):
     if len(words) >= 5:
         return words[4]
     else:
-        return "Matchup WR not found"
+        return "Matchup WR not found"#fixed url finder
+
 
 #get player input
 def main():
