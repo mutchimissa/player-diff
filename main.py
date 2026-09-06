@@ -139,6 +139,7 @@ def get_matchwr(player_champ, enemy_champ, role):
     else:
         return "Matchup WR not found"
 
+# make outputs look pretty
 def display_results(
     role,
     enemy_champ,
